@@ -1,0 +1,36 @@
+.flexContainer {
+    min-height: 100vh;
+    background: #B7BABE;
+}
+
+.container {
+    padding-top: 40px;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flexitem {
+    position: relative;
+    width: 90%;
+    display: flex;
+    /* margin-top: 30px; */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /*justify-content: space-between;*/
+}
+
+.project {
+    border: 1px solid black;
+    width: 600px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    background: #B7BABE;
+    justify-content: center;
+    align-items: center;
+}
