@@ -1,32 +1,33 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, useCallback, useState} from 'react';
 import style from './FormSelection.module.css'
 import SuperSelect from "../../castom_components/SuperSelect";
 import SuperButton from "../../castom_components/SuperButton";
 import iconfile from '../../asses/image/filesicon.svg'
 
 
-export default function FormSelection() {
+export const FormSelection = React.memo(() => {
     const options = ['Выбор 1', 'Выбор 2', 'Выбор 3', 'Выбор 4']
     const [option, onChangeOption] = useState<string>('hhh');
     const [value, setValue] = useState<string>('');
     const [error, setError] = useState<boolean>(false);
     const [text, setText] = useState('');
     const [sizeRows, setSizeRows] = useState(1);
-    const [files, setFiles] = useState<any>([]);
+    const [files, setFiles] = useState<Array<any>>([]);
 
 
-    const onChangeValue = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeValue = useCallback(function (e: ChangeEvent<HTMLInputElement>) {
         const value = e.currentTarget.value
         setValue(value)
-
-        if (value.length !== 12) {
+        if (!/^\d+$/.test(value)) {
             setError(true)
+
         } else {
             setError(false)
         }
-    }
+    }, [])
 
-    const onChangeText = (e) => {
+
+    const onChangeText = useCallback(function (e: ChangeEvent<HTMLTextAreaElement>) {
         setText(e.currentTarget.value)
         if (text.length > 35) {
             setSizeRows(2)
@@ -34,15 +35,16 @@ export default function FormSelection() {
         if (text.length > 70) {
             setSizeRows(3)
         }
-    }
+    }, [text.length])
 
 
-    let onChangeFile = (e) => {
-        let file = e.currentTarget.files
-        let filesArr = [...file]
-        setFiles([...files, ...filesArr])
-
-    }
+    const onChangeFile = useCallback(function (e: ChangeEvent<HTMLInputElement>) {
+        if (e.currentTarget.files) {
+            let file = e.currentTarget.files[0]
+            let contact = files.concat(file)
+            setFiles(contact)
+        }
+    }, [files])
 
     return (
         <div>
@@ -61,7 +63,8 @@ export default function FormSelection() {
                                              onChangeOption={onChangeOption}
                                 /></div>
                             <div>
-                                <input type='phone'
+                                <input type='Phone'
+                                       multiple={false}
                                        className={error ? style.error : style.input}
                                        value={value}
                                        placeholder={'Номер телефона *'}
@@ -107,6 +110,6 @@ export default function FormSelection() {
             </div>
         </div>
     );
-}
+})
 
 

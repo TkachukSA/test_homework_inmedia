@@ -7,7 +7,7 @@ import birds from '../../asses/image/birds.svg'
 import birdsEnd from '../../asses/image/birdseEnd.svg'
 
 
-export default function Card() {
+export const Card = React.memo(() => {
 
     return (<div className={style.container}>
             <div className={style.carbBackgroundContainer}>
@@ -18,7 +18,7 @@ export default function Card() {
                 <Tilt className="Tilt" options={{max: 45, reverse: true, speed: 1000}}>
                     <div className={style.cardContainer}>
                         <div className={style.image}>
-                            <img alt={'background image'} src={union}/>
+                            <img alt={''} src={union}/>
                         </div>
                         <div className={style.titleCard}>
                             <span>Интерактивная карточка</span>
@@ -33,4 +33,4 @@ export default function Card() {
             </div>
         </div>
     );
-}
+})
