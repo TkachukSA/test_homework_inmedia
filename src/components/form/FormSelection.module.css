@@ -42,7 +42,7 @@
 .input {
     padding-left: 10px;
     font-size: 20px;
-    width: 440px;
+    width: 430px;
     height: 25px;
     outline: none;
     border: rgba(255, 255, 255, 1);
@@ -123,7 +123,7 @@
 .textarea {
     padding-left: 10px;
     font-size: 20px;
-    width: 440px;
+    width: 430px;
     min-height: 25px;
     max-height: max-content;
     outline: none;

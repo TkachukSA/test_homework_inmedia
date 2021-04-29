@@ -1,0 +1,75 @@
+.select {
+    position: relative;
+    font-family: 'Manrope', sans-serif;
+}
+.placeholder{
+    padding-left: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+ .main {
+    font-size: 20px;
+    width: 440px;
+    height: 25px;
+    outline: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+     border-bottom: 1px solid black;
+     font-family: 'Manrope', sans-serif;
+     font-style: normal;
+     font-weight: normal;
+
+     line-height: 32px;
+}
+@media screen and (max-width: 570px) {
+    .select {
+        width: 320px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .main {
+        width: 320px;
+    }
+}
+.items {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectRed {
+    height: 48px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.item.select {
+    background-color: rgba(244, 244, 244, 1);
+    color: black;
+    height: 48px;
+    background-image: url(selectedVector.svg) ;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-y: 10px;
+    background-position: left;
+    border-width: 0.1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+@media screen and (max-width: 570px) {
+    .item.select {
+        width: 270px;
+    }
+}

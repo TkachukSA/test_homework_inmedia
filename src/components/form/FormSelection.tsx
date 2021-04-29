@@ -6,8 +6,15 @@ import iconfile from '../../asses/image/filesicon.svg'
 
 
 export const FormSelection = React.memo(() => {
-    const options = ['Выбор 1', 'Выбор 2', 'Выбор 3', 'Выбор 4']
-    const [option, onChangeOption] = useState<string>('hhh');
+    const options = [
+        {title: "Выбор 1", value: 1},
+        {title: "Выбор 2", value: 2},
+        {title: "Выбор 3", value: 3},
+        {title: "Выбор 4", value: 4},
+        {title: "Выбор 5", value: 5}
+
+    ]
+    const [option, onChangeOption] = useState<any>('hhh');
     const [value, setValue] = useState<string>('');
     const [error, setError] = useState<boolean>(false);
     const [text, setText] = useState('');
@@ -57,10 +64,9 @@ export const FormSelection = React.memo(() => {
                                 <span>Дополнительный текст</span>
                             </div>
                             <div>
-                                <SuperSelect options={options}
+                                <SuperSelect items={options}
                                              value={option}
-                                             className={style.selected}
-                                             onChangeOption={onChangeOption}
+                                             onClick={onChangeOption}
                                 /></div>
                             <div>
                                 <input type='Phone'

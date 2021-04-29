@@ -1,34 +1,65 @@
-import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent} from "react";
+import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent, useState, ButtonHTMLAttributes} from "react";
+import s from  './SuperSelect.module.css'
 
 
 
-type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
-type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: string[]
-    onChangeOption?: (option: string) => void
-    Value?: string
+
+type itemType = {
+    title: string
+    value: any
 }
 
-const SuperSelect: React.FC<SuperSelectPropsType> = (
+type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+type SuperButtonPropsType = DefaultButtonPropsType & {
+    value?: any
+    onClick: (value: any) => void
+    items: Array<itemType>
+}
+const SuperSelect: React.FC<SuperButtonPropsType> = (
     {
-        options,
-        onChange, onChangeOption, value,
+        items, className, value, onClick,
         ...restProps
     }
 ) => {
-    const mappedOptions = options && options.map((o, i) => <option key={i}>{o}</option>)
+    const select = items.find(i => i.value === value)
+    const [active, setActive] = useState(false)
+    const [hovored, setHovored] = useState(value)
+    const hovoreditem = items.find(i => i.value === hovored)
+    const togl = () => {setActive(!active)}
 
-    const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        onChangeOption && onChangeOption(e.currentTarget.value)
-    }
+
+
     return (
-        <select placeholder={'gitfitrdir'} onChange={onChangeCallback} {...restProps}>
-            {mappedOptions}
-        </select>
+        <>
+            <span className={s.placeholder}>Выбор чего-то</span>
+            <div className={s.select}>
+        <span className={s.main} onClick={togl}>
+            {select && <div style={{paddingLeft: "10px"}}>{select.title}</div>}</span>
+                {
+                    active &&
+                <div className={s.items} tabIndex={0}>
+                    {items.map(i => <div
+                        className={s.item + " " + (hovoreditem === i ? s.select : s.selectRed)}
+                        onClick={() => {onClick(i.value);
+                            togl()
+                        }}
+                        onMouseEnter={() => {setHovored(i.value)}}
+                        key={i.value}
+                    >{<span>{i.title}</span>}
+                    </div>)}
+                </div>
+
+                }
+            </div>
+        </>
     );
 }
 
 export default SuperSelect;
+
+
+
+
 
 
 
