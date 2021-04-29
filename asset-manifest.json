@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/test_homework_inmedia/static/css/main.58e41332.chunk.css",
-    "main.js": "/test_homework_inmedia/static/js/main.d9755e93.chunk.js",
-    "main.js.map": "/test_homework_inmedia/static/js/main.d9755e93.chunk.js.map",
-    "runtime-main.js": "/test_homework_inmedia/static/js/runtime-main.1f65e422.js",
-    "runtime-main.js.map": "/test_homework_inmedia/static/js/runtime-main.1f65e422.js.map",
-    "static/js/2.aca4ca37.chunk.js": "/test_homework_inmedia/static/js/2.aca4ca37.chunk.js",
-    "static/js/2.aca4ca37.chunk.js.map": "/test_homework_inmedia/static/js/2.aca4ca37.chunk.js.map",
-    "static/js/3.c635afb7.chunk.js": "/test_homework_inmedia/static/js/3.c635afb7.chunk.js",
-    "static/js/3.c635afb7.chunk.js.map": "/test_homework_inmedia/static/js/3.c635afb7.chunk.js.map",
+    "main.css": "/test_homework_inmedia/static/css/main.2bbc46e2.chunk.css",
+    "main.js": "/test_homework_inmedia/static/js/main.0a83b375.chunk.js",
+    "main.js.map": "/test_homework_inmedia/static/js/main.0a83b375.chunk.js.map",
+    "runtime-main.js": "/test_homework_inmedia/static/js/runtime-main.a88badd8.js",
+    "runtime-main.js.map": "/test_homework_inmedia/static/js/runtime-main.a88badd8.js.map",
+    "static/js/2.7dfd5eb3.chunk.js": "/test_homework_inmedia/static/js/2.7dfd5eb3.chunk.js",
+    "static/js/2.7dfd5eb3.chunk.js.map": "/test_homework_inmedia/static/js/2.7dfd5eb3.chunk.js.map",
+    "static/js/3.78910dcc.chunk.js": "/test_homework_inmedia/static/js/3.78910dcc.chunk.js",
+    "static/js/3.78910dcc.chunk.js.map": "/test_homework_inmedia/static/js/3.78910dcc.chunk.js.map",
     "index.html": "/test_homework_inmedia/index.html",
-    "static/css/main.58e41332.chunk.css.map": "/test_homework_inmedia/static/css/main.58e41332.chunk.css.map",
-    "static/js/2.aca4ca37.chunk.js.LICENSE.txt": "/test_homework_inmedia/static/js/2.aca4ca37.chunk.js.LICENSE.txt",
+    "static/css/main.2bbc46e2.chunk.css.map": "/test_homework_inmedia/static/css/main.2bbc46e2.chunk.css.map",
+    "static/js/2.7dfd5eb3.chunk.js.LICENSE.txt": "/test_homework_inmedia/static/js/2.7dfd5eb3.chunk.js.LICENSE.txt",
     "static/media/Group164.14d32fe0.svg": "/test_homework_inmedia/static/media/Group164.14d32fe0.svg",
     "static/media/SuperButton.module.css": "/test_homework_inmedia/static/media/Vector.9a16c2c4.svg",
     "static/media/andres.daa7714b.obj": "/test_homework_inmedia/static/media/andres.daa7714b.obj",
     "static/media/FormTabs.module.css": "/test_homework_inmedia/static/media/uparrow.22ebc020.svg",
     "static/media/birds.bae3afff.svg": "/test_homework_inmedia/static/media/birds.bae3afff.svg",
     "static/media/birdseEnd.dc218958.svg": "/test_homework_inmedia/static/media/birdseEnd.dc218958.svg",
-    "static/media/filesicon.81325f84.svg": "/test_homework_inmedia/static/media/filesicon.81325f84.svg"
+    "static/media/filesicon.81325f84.svg": "/test_homework_inmedia/static/media/filesicon.81325f84.svg",
+    "static/media/SuperSelect.module.css": "/test_homework_inmedia/static/media/selectedVector.a6645d9b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1f65e422.js",
-    "static/js/2.aca4ca37.chunk.js",
-    "static/css/main.58e41332.chunk.css",
-    "static/js/main.d9755e93.chunk.js"
+    "static/js/runtime-main.a88badd8.js",
+    "static/js/2.7dfd5eb3.chunk.js",
+    "static/css/main.2bbc46e2.chunk.css",
+    "static/js/main.0a83b375.chunk.js"
   ]
 }
