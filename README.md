@@ -1,8 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Github pages: https://asa121asa.github.io/test_homework_inmedia/
 
-## Available Scripts
 
 In the project directory, you can run:
 
